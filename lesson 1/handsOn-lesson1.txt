@@ -1,0 +1,10 @@
+Exercise 1
+SELECT * FROM customers WHERE FirstName = 'Jennifer';
+
+Exercise 2
+SELECT Name, Composer from tracks where AlbumId > 250 and AlbumId < 340;
+
+
+Exercise 3
+SELECT FirstName, LastName, Phone, Fax, Email from customers WHERE Country = 'USA' or Country ='Brazil';
+ 
