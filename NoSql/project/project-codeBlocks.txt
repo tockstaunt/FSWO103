@@ -1,0 +1,28 @@
+db.employees.insertMany([
+    {"name":"Alison Davidson","Birthday":"04/05/75","Address":"874 W. Oak Place","City":"Gary","State":"Indiana","position":{"PositionName":"CustomerSupport","Remote":"True","FullTime":"True"}},
+    {"name":"Henry Chapelton","Birthday":"09/29/80","Address":"9324 E. Vista Way","City":"Tempe","State":"Arizona","position":{"PositionName":"CustomerSupport","Remote":"False","FullTime":"True"}},
+    {"name":"Alex Miller","Birthday":"11/22/83","Address":"244 Price Road","City":"Mesa","State":"Arizona","position":{"PositionName":"Customer Support","Remote":"False","FullTime":"False"}},
+    {"name":"Carly Nielson","Birthday":"08/04/87","Address":"678 W. Westward Road","City":"Phoenix","State":"Arizona","position":{"PositionName":"Office Manager","Remote":"False","FullTime":"True"}},
+    {"name":"Tom Talbot","Birthday":"12/30/89","Address":"12 Oakland Way","City":"Chandler","State":"Arizona","position":{"PositionName":"Inventory Manager","Remote":"False","FullTime":"True"}},
+    {"name":"Mary Crawley","Birthday":"07/06/80","Address":"1010 Granite Way","City":"Charlotte","State":"North Carolina","position":{"PositionName":"Human Resources","Remote":"True","FullTime":"True"}},
+    {"name":"Daisy Baxter","Birthday":"09/09/87","Address":"990 E. 84th St.","City":"Tempe","State":"Arizona","position":{"PositionName":"CEO","Remote":"False","FullTime":"True"}},
+    {"name":"William Coyle","Birthday":"10/11/91","Address":"944 W. 16th St.","City":"Phoenix","State":"Arizona","position":{"PositionName":"Intern","Remote":"False","FullTime":"False"}},
+    {"name":"Edith Bates","Birthday":"07/28/90","Address":"7 E. 20th Pl.","City":"Chandler","State":"Arizona","position":{"PositionName":"Customer Support","Remote":"False","FullTime":"True"}},
+    {"name":"Gwen Harding","Birthday":"10/11/86","Address":"234 W. 48th. St.","City":"Phoenix","State":"Arizona","position":{"PositionName":"Office Assistent","Remote":"False","FullTime":"True"}}
+ ])
+
+db.employees.drop()
+    db.employees.insertMany([
+        {"name":"Alison Davidson","Birthday":"04/05/75","Address":"777 E. 1st St. # 120","City":"Tempe","position":{"PositionName":"CustomerSupport","Remote":"True","FullTime":"True"}},
+        {"name":"Henry Chapelton","Birthday":"09/29/80","Address":"9324 E. Vista Way","City":"Tempe","position":{"PositionName":"CustomerSupport","Remote":"False","FullTime":"True"}},
+        {"name":"Alex Miller","Birthday":"11/22/83","Address":"244 Price Road","City":"Mesa","position":{"PositionName":"Customer Support","Remote":"False","FullTime":"False"}},
+        {"name":"Carly Nielson","Birthday":"08/04/87","Address":"678 W. Westward Road","City":"Phoenix","position":{"PositionName":"Office Manager","Remote":"False","FullTime":"True"}},
+        {"name":"Tom Talbot","Birthday":"12/30/89","Address":"12 Oakland Way","City":"Chandler","position":{"PositionName":"Inventory Manager","Remote":"False","FullTime":"True"}},
+        {"name":"Mary Crawley","Birthday":"07/06/80","Address":"8322 W. Vista Pl.","City":"Scottsdale","position":{"PositionName":"Human Resources","Remote":"True","FullTime":"True"}},
+        {"name":"Daisy Baxter","Birthday":"09/09/87","Address":"990 E. 84th St.","City":"Tempe","position":{"PositionName":"CEO","Remote":"False","FullTime":"True"}},
+        {"name":"William Coyle","Birthday":"10/11/91","Address":"944 W. 16th St.","City":"Phoenix","position":{"PositionName":"Intern","Remote":"False","FullTime":"False"}},
+        {"name":"Edith Bates","Birthday":"07/28/90","Address":"7 E. 20th Pl.","City":"Chandler","position":{"PositionName":"Customer Support","Remote":"False","FullTime":"True"}},
+        {"name":"Gwen Harding","Birthday":"10/11/86","Address":"234 W. 48th. St.","City":"Phoenix","position":{"PositionName":"Office Assistent","Remote":"False","FullTime":"True"}}
+     ])
+
+db.employees.createIndex({"position":1})
