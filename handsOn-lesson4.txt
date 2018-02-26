@@ -1,0 +1,32 @@
+Hands On 1
+CREATE VIEW [ArtistsAlbums]
+ AS SELECT name AS ArtistName,title AS AlbumTitle,artistid 
+FROM artists JOIN albums USING (artistid)
+WHERE artistid < 100;
+
+SELECT * FROM [ArtistsAlbums];
+
+Hands On 2
+DROP VIEW [ArtistsAlbums];
+CREATE VIEW [ArtistsAlbums]
+AS SELECT name AS ArtistName,title AS AlbumTitle,artistid,AlbumId
+FROM artists
+INNER JOIN albums USING (artistid)
+WHERE artistid < 100;
+SELECT * FROM [ArtistsAlbums];
+
+Hands On 3
+CREATE TABLE ProductList(
+ProductId INTEGER PRIMARY KEY Autoincrement, 
+ProductName NVARCHAR(40) NOT NULL, 
+Price INTEGER NOT NULL, 
+DateAdded date DEFAULT(datetime('now','localtime')) NOT NULL, 
+EmployeeSupportId INTEGER NOT NULL);
+
+INSERT INTO ProductList(ProductName,
+Price,
+EmployeeSupportId)
+VALUES ("gelaflax","10.80",1);
+
+SELECT * 
+FROM ProductList;

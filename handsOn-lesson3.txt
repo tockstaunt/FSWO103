@@ -1,0 +1,71 @@
+handsOn 1 
+
+Exercise 1
+INSERT INTO employees (FirstName, Lastname, Birthdate, HireDate, City, State, Country, Phone, Email) 
+
+VALUES ('John', 'Harris','12/21/1961', '2012', 'Mc Rae', 'AR', 'USA', '555-111-2222', 'unknown@unknownone.com'); 
+
+SELECT *
+FROM employees
+ WHERE EmployeeId = 9;
+
+
+
+Excercise 2
+UPDATE employees 
+SET Title = "Floor Manager", ReportsTo = "2"
+ WHERE EmployeeId = 9;
+
+
+SELECT * 
+FROM employees
+WHERE EmployeeId = 9;
+
+HandsOn 2		
+Exercise 1
+SELECT * 
+FROM tracks 
+WHERE composer is null;
+
+
+Exercise 2
+SELECT * 
+FROM customers
+WHERE state IS NOT NULL AND Company IS NOT NULL;
+
+Exercise 3
+SELECT * 
+FROM customers 
+WHERE state IS NULL AND Company IS NULL;
+
+UPDATE customers 
+SET state = "Europe"
+ WHERE state IS NULL AND Company IS  NULL;
+
+
+SELECT * 
+FROM customers 
+WHERE state = "Europe";
+
+HandOn 3
+
+Exercise 1
+SELECT * 
+FROM customers 
+WHERE Country = "United Kingdom";
+
+DELETE FROM customers 
+WHERE country = "United Kingdom";
+
+INSERT INTO customers(Firstname, Lastname, city, country, phone ,email) VALUES ("BRUT","ONE","Moscow","Russia","000-001-0000","rguy@ru.ktv");
+
+ INSERT INTO customers(Firstname, Lastname, city, country, phone ,email) 
+VALUES ("Bant","Two","Moscow","Russia","000-002-0000","rguy2@ruz"); 
+
+INSERT INTO customers(Firstname, Lastname, city, country, phone ,email)
+VALUES ("Rant", 'Three','Moscow','Russia','000-003-0000','rguy3@ruz');
+
+UPDATE customers 
+SET SupportRepId = 6 
+WHERE country = "Russia";
+

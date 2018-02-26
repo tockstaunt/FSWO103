@@ -1,0 +1,60 @@
+handsOn 1
+
+Exercise 1
+
+SELECT firstName,lastName,customerId,invoiceId 
+
+FROM customers 
+
+JOIN invoices USING (customerId);
+
+
+Exercise 2
+
+SELECT *
+ 
+FROM playlist_track
+
+JOIN playlists USING (PlaylistId) 
+
+JOIN tracks USING (TrackId) 
+WHERE Bytes < 6000000 AND TrackId < 5
+;
+
+HandsOn 2
+
+Exercise 1
+
+SELECT genres.Name AS GenreName, *
+ 
+FROM genres 
+JOIN tracks;
+
+Exercise 2
+
+SELECT albums.Title, tracks.Composer 
+
+FROM tracks
+JOIN albums USING (AlbumId)
+
+WHERE Composer LIKE "A%" 
+
+OR Composer LIKE "E%"
+
+OR Composer LIKE "I%"
+
+OR Composer LIKE "O%"
+
+OR Composer LIKE "U%"
+
+ORDER BY Composer
+;
+
+HandsOn 3
+
+SELECT playlists.Name AS PlaylistName, tracks.Name as TrackName, Tracks.Composer, tracks.UnitPrice
+FROM playlists
+
+JOIN Tracks 
+ORDER BY composer DESC
+;

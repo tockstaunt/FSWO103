@@ -1,0 +1,30 @@
+part 1
+SELECT * 
+FROM albums
+JOIN customers on customers.CustomerId = albums.AlbumId
+WHERE AlbumId in (8, 21, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 41, 42, 45, 47, 52, 53);
+
+part 2
+CREATE TABLE TopCustomers(
+firstname NVARCHAR(40) NOT NULL, 
+lastname NVARCHAR(40) NOT NULL, 
+address NVARCHAR(75), 
+city NVARCHAR(50), 
+state NVARCHAR(10), 
+postalcode INTEGER NVARCHAR(5), 
+phone INTEGER);
+
+INSERT INTO TopCustomers(FirstName,LastName, address, city, state, postalcode,phone)
+select firstName,lastname, address, city, state, postalcode,phone from customers
+join invoices on invoices.InvoiceId = customers.CustomerId
+where Total > 10;
+
+part 3
+update customers
+ SET supportRepId = 6 
+WHERE (SELECT albumid 
+from albums 
+WHERE albumId in (8, 21, 22, 23, 24, 25, 26, 27, 28, 29, 32, 33, 34, 41, 42, 45, 47, 52, 53) 
+);
+
+
