@@ -1,0 +1,4 @@
+db.inventory.updateOne({"item":"journal"},{$set:{"h":16}},{upsert:true})
+db.inventory.updateMany({"status" :"D"},{$set:{"qty":50}},{upsert:true})
+db.inventory.updateOne({"item":"paper"},{$set:{"rating":"4 stars"}},{upsert:true})
+db.inventory.updateOne({"item":"paper"},{$set:{"status":"A"}},{upsert:true})
